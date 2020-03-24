@@ -10,7 +10,6 @@ import (
  */
 
 //export onMessageGo
-func onMessageGo(msgPtr unsafe.Pointer) {
-	msg := (*C.struct_Message)(msgPtr)
-	revcMessage(msg)
+func onMessageGo(msg unsafe.Pointer) {
+	recvMessage(msg)
 }
